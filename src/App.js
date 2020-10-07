@@ -1,6 +1,7 @@
 import React from 'react';
 
-import Form from './components/Form'
+import Form from './components/Form/Form'
+import Cards from './components/Cards/Cards'
 class App extends React.Component {
   state = {
     showForm: false,
@@ -22,14 +23,13 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.state.places)
     return (
       <div className="App">
         <button onClick={this.handleShowForm}>Add a place</button>
         {this.state.showForm
           ? (<Form onSubmit={this.handleFormData} />)
           : null}
-
+        <Cards places={this.state.places} />
       </div>
     )
   }
