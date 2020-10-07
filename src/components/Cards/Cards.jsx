@@ -1,14 +1,15 @@
 import React from 'react'
 import Card from './Card'
 
-const Cards = ({ places }) => {
-  return (
-    <div>
-      {places.map((place) => (
-        <Card key={place.pic} {...place} />
-      ))}
+const Cards = ({ places, handleCardClick }) => (
+  places.map((place) => (
+    <div
+      key={place.pic}
+      onClick={() => handleCardClick(place)}
+    >
+      <Card {...place} />
     </div>
-  )
-}
+  ))
+)
 
 export default Cards

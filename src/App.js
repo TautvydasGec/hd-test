@@ -22,6 +22,10 @@ class App extends React.Component {
     })
   }
 
+  handleCardClick = (card) => {
+    console.log(card)
+  }
+
   render() {
     return (
       <div className="App">
@@ -29,7 +33,11 @@ class App extends React.Component {
         {this.state.showForm
           ? (<Form onSubmit={this.handleFormData} />)
           : null}
-        <Cards places={this.state.places} />
+        <Cards
+          handleCardClick={this.handleCardClick}
+          places={this.state.places}
+
+        />
       </div>
     )
   }
