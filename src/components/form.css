@@ -1,0 +1,39 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
+  max-width: 100%;
+  padding: 20px;
+}
+
+.form-label {
+  margin-top: 5px;
+  text-align: left;
+  width: 100%;
+  font-size: 18px;
+}
+
+.form-input,
+.form-textarea {
+  display: block;
+  margin-top: 5px;
+  font-size: 1rem;
+  width: calc(100% - 20px);
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 2px;
+  padding: 10px;
+}
+
+.form-textarea {
+  height: 250px;
+  display: flex;
+  align-content: flex-start;
+  justify-content: flex-start;
+  text-align: start;
+  align-items: flex-start;
+}
+
+.form-submit {
+  font-size: 18px;
+}
